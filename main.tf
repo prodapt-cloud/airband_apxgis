@@ -50,3 +50,17 @@ module "database" {
   primary_database_admin = var.primary_database_admin
   primary_database_password = var.primary_database_password
 }
+
+
+
+resource "azurerm_log_analytics_workspace" "workspace_id" {
+  name                = "example-log-analytics-workspace"
+  location            = var.location
+  resource_group_name = var.resource_group
+  sku                 = "PerGB2018"
+  retention_in_days   = 30
+
+  tags = {
+    environment = "production"
+  }
+}

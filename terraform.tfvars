@@ -16,4 +16,5 @@ primary_database_password = "pa$$w0rd"
 primary_database_version = "12.0"
 storage_account_name="airband-hld-dev-tier"
 container_name = "airband-hld-dev"
+resource_group = "airband-hld"
 
