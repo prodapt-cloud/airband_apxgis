@@ -51,10 +51,17 @@ module "database" {
   primary_database_password = var.primary_database_password
 }
 
+module "monitoring" {
+  source                   = "../../modules/monitoring"
+  monitor_name             = "dev-monitor"
+  target_resource_id       = module.compute.vm_id
+  log_analytics_workspace_id = "/subscriptions/xxxxx/resourceGroups/xxxxx/providers/Microsoft.OperationalInsights/workspaces/dev-logs"
+}
+
 
 
 resource "azurerm_log_analytics_workspace" "workspace_id" {
-  name                = "example-log-analytics-workspace"
+  name                = "airband-hld"
   location            = var.location
   resource_group_name = var.resource_group
   sku                 = "PerGB2018"
