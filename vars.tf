@@ -17,5 +17,11 @@ variable "primary_database_version" {}
 variable "storage_account_name" {}
 variable "container_name" {}
 variable "resource_group" {}
+variable "storage_account_name" {}
+variable "storage_account_tier" {}
+variable "storage_account_replication_type" {}
+variable "storage_account_kind" {}
+variable "static_website_index_document" {}
+variable "static_website_error_404_document" {}
 
 
