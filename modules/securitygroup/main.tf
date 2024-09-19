@@ -84,7 +84,7 @@ resource "azurerm_network_security_group" "db-nsg" {
         source_address_prefix = "192.168.2.0/24"
         source_port_range = "*"
         destination_address_prefix = "*"
-        destination_port_range = "3306"
+        destination_port_range = "5432"
     }
     
     security_rule {
@@ -96,7 +96,7 @@ resource "azurerm_network_security_group" "db-nsg" {
         source_address_prefix = "192.168.2.0/24"
         source_port_range = "*"
         destination_address_prefix = "*"
-        destination_port_range = "3306"
+        destination_port_range = "5432"
     }
     
     security_rule {
@@ -108,7 +108,7 @@ resource "azurerm_network_security_group" "db-nsg" {
         source_address_prefix = "192.168.1.0/24"
         source_port_range = "*"
         destination_address_prefix = "*"
-        destination_port_range = "3306"
+        destination_port_range = "5432"
     }
 }
 

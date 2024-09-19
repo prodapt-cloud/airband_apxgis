@@ -51,6 +51,8 @@ module "database" {
   primary_database_password = var.primary_database_password
 }
 
+
+
 module "monitoring" {
   source                   = "../../modules/monitoring"
   monitor_name             = "dev-monitor"
